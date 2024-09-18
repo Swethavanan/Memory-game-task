@@ -1,0 +1,117 @@
+body{
+    background-image: linear-gradient(to right, #000099 ,#000066,#060e4a,#03083f);
+}
+h1{
+   font-family: "Protest Guerrilla",sans-serif;
+    font-size: 45px;
+    margin-top: 0;
+    margin-left: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+
+    
+}
+h2{
+    font-family: "Graduate",sans-serif;
+    color: yellow;
+    font-size: 35px;
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  
+}
+.restart{
+    display: flex;
+    position: absolute;
+    right: 40px;
+    top:30px;
+     padding: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to right,#088036,#08381a);
+    color: whitesmoke;
+    font-family:"Sofadi One", san-serif;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.flip-card {
+    background-color: transparent;
+    width: 150px; 
+    height: 150px;
+    perspective: 500px; 
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card-back img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.flip-card-game {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; 
+    transform-style: preserve-3d; 
+}
+.flip-card:hover .flip-card-game{
+    transform: rotateY(180deg); 
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 10px; 
+}
+
+.flip-card-front {
+    background-image: linear-gradient(to bottom, #b35fe3,#2e1140);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #b35fe3,#2e1140);
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: auto auto; 
+    }
+
+    .flip-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .restart {
+        left: 70%; 
+        top: 40%;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .container {
+        grid-template-columns: 1fr; 
+    }
+
+    .flip-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .restart {
+        left: 60%;
+        top: 30%;
+    }
+}
