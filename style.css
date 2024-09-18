@@ -95,14 +95,15 @@ h2{
     }
 
     .restart {
-        left: 70%; 
-        top: 40%;
+        left: 50%; 
+        top: 10%;
+        padding: 2px;
     }
 }
 
 @media only screen and (max-width: 1080px){
     .container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 2; 
     }
 
     .flip-card {
@@ -111,7 +112,8 @@ h2{
     }
 
     .restart {
-        left: 60%;
-        top: 30%;
+        left: 30%;
+        top: 10%;
+        padding: 2px;
     }
 }
